@@ -1,0 +1,48 @@
+newmtl Cylinder material_ee767b86-1ac5-4ec1-9d6b-7fc671f3b14d
+Kd 0.835 0.929 0.906
+d 1.000
+newmtl Sphere material_9320de56-58c5-4803-9288-fb38d27653a3
+Kd 0.463 0.514 0.969
+d 1.000
+newmtl 3D Text material 8_f34bb430-1807-4e7a-8b72-7ba97fe69d23
+Kd 0.949 0.741 0.957
+d 1.000
+newmtl 3D Text material 1_dc24ddfa-fd63-485e-a180-ebdbb8aa8048
+Kd 0.494 0.722 0.773
+d 1.000
+newmtl 3D Text material 5_e4060cb2-3a06-44df-b071-1fef4179129a
+Kd 0.494 0.722 0.773
+d 1.000
+newmtl 3D Text material 2_9bd01baf-434d-4b1f-9697-bb47916b64a5
+Kd 0.494 0.722 0.773
+d 1.000
+newmtl 3D Text material 4_34ef23d9-c266-4bfb-bb7c-8ff944f935de
+Kd 0.494 0.722 0.773
+d 1.000
+newmtl 3D Text material 3_1fcd6105-0833-461e-9fbb-0034ec4a1215
+Kd 0.494 0.722 0.773
+d 1.000
+newmtl 3D Text material_3b755cc1-8532-451d-855a-f1e7870454ca
+Kd 0.494 0.722 0.773
+d 1.000
+newmtl Torus material 1_26fc5a94-03e5-4fbd-aab1-8a5e43c837be
+Kd 0.184 0.341 0.455
+d 1.000
+newmtl Torus material_260b12c1-38bc-4ac0-a635-3fb00f96af8c
+Kd 0.902 0.800 0.408
+d 1.000
+newmtl Torus material 2_499f3b00-0abc-45ae-a265-60feb78fb770
+Kd 0.184 0.341 0.455
+d 1.000
+newmtl Box material 2_2e669bdc-6d55-4ec0-a0bd-a77bac6c13a7
+Kd 0.067 0.533 0.569
+d 1.000
+newmtl Box material 1_1913788c-e6b8-49ef-9afc-c7dbcb1cfdf1
+Kd 0.067 0.533 0.569
+d 1.000
+newmtl Box material_f5fa639f-b094-4bb5-bc14-d2c9b6aac89b
+Kd 0.067 0.533 0.569
+d 1.000
+newmtl Box material 3_3c875afb-b5d6-4f2c-b7af-6709a8820558
+Kd 0.067 0.533 0.569
+d 1.000
