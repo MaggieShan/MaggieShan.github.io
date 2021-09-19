@@ -1,0 +1,27 @@
+@import '_variables.module';
+
+.social-container {
+    position: fixed;
+    bottom: 5vh;
+    left: 5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.line {
+    position: relative;
+    top: 20px;
+    left: 1vw;
+    height: 10vh;
+    width: 2px;
+    background-color: $secondaryColor;
+}
+
+.icon {
+    font-size: 2rem;
+    padding: 10px 0;
+}
+
+.icon svg:hover {
+    filter: drop-shadow(0 0 10px $secondaryColor);
+}

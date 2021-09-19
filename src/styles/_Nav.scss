@@ -1,0 +1,24 @@
+@import '_variables.module';
+
+.nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    bottom: 5vh;
+    right: 5vw;
+}
+
+.nav-item {
+    font-family: $titleFont;
+    font-size: 2rem;
+    text-decoration: none;
+    color: transparent;
+    -webkit-text-stroke: 1px $secondaryColor;
+}
+
+.active,
+.nav-item:hover {
+    color: $secondaryColor;
+    cursor: pointer;
+}

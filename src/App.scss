@@ -1,48 +1,74 @@
-@import './shared.scss';
+@import 'styles/_variables.module';
+@import 'styles/_ThreeD';
+@import 'styles/Nav';
 
 .App {
   text-align: center;
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
+  color: $secondaryColor;
+  background-color: $primaryColor;
 }
 
 body {
+  font-family: $bodyFont;
   padding: 0;
   margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-family: $titleFont;
+  font-weight: 900;
+  color: $secondaryColor;
+  -webkit-text-stroke: 2px $secondaryColor;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h1 {
+  font-size: 6rem;
+  text-align: right;
+  line-height: 1;
 }
 
-.App-header {
-  background-color: $backgroundColor;
-  min-height: 100vh;
+.header p {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: right;
+}
+
+.header {
+  height: 90vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: $textColorPrimary;
+  color: $secondaryColor;
+  padding-bottom: 10vh;
 }
 
-.App-link {
-  color: #61dafb;
+.header-text {
+  position: absolute;
+  right: 20vw;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column-reverse;
   }
-  to {
-    transform: rotate(360deg);
+  .header-text {
+    position: relative;
+    padding: 0;
+    right: 0;
+    top: 10vh;
+    margin-bottom: 0;
   }
+}
+
+@media (max-width: 640px) {
+
 }

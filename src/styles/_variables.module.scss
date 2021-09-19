@@ -1,0 +1,13 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Roboto&display=swap');
+$titleFont: 'Baloo 2', cursive;
+$bodyFont: 'Roboto', sans-serif;
+
+// Colours
+$primaryColor: #2F5774;
+$secondaryColor: #D5EDE7;
+
+:export {
+    primaryColor: $primaryColor;
+    secondaryColor: $secondaryColor;
+}
