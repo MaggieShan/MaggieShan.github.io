@@ -10,7 +10,7 @@ function Project(props) {
                 <p>{props.desc}</p> 
                 <div className="links">
                     <a href={props.git} target="_blank" rel="noreferrer">{props.git ? "Github" : ""}</a> <br/>
-                    <a href={props.git} target="_blank" rel="noreferrer">{props.dev ? "Devpost" : ""}</a>
+                    <a href={props.dev} target="_blank" rel="noreferrer">{props.dev ? "Devpost" : ""}</a>
                 </div>
             </div>
         </div>
