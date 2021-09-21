@@ -6,7 +6,7 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 function Icon(props) {
     return (
-        <a className='icon' href={props.link}>
+        <a className='icon' href={props.link} target="__blank">
             <FontAwesomeIcon 
                 icon={props.name} 
                 color={props.outline ? 'transparent' : variables.secondaryColor} 
@@ -20,10 +20,10 @@ function Icon(props) {
 const Socials = () => {
     return (
         <div className="social-container">
-            <Icon name={faLinkedinIn} link={"#"} outline={true} />
-            <Icon name={faGithub} link={"#"} outline={true} />
-            <Icon name={faCodepen} link={"#"} />
-            <Icon name={faEnvelope} link={"#"} />
+            <Icon name={faLinkedinIn} link={"https://www.linkedin.com/in/maggieshan/"} outline={true} />
+            <Icon name={faGithub} link={"https://github.com/MaggieShan"} outline={true} />
+            <Icon name={faCodepen} link={"https://codepen.io/maggieshan/"} />
+            <Icon name={faEnvelope} link={"mailto:sshan.maggie@gmail.com"}/>
             <div className="line"></div>
         </div>
     );

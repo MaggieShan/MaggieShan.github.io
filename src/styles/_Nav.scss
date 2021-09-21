@@ -1,6 +1,6 @@
 @import '_variables.module';
 
-.nav {
+.navi {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
     right: 5vw;
 }
 
-.nav-item {
+.navi-item {
     font-family: $titleFont;
     font-size: 2rem;
     text-decoration: none;
@@ -18,7 +18,7 @@
 }
 
 .active,
-.nav-item:hover {
+.navi-item:hover {
     color: $secondaryColor;
     cursor: pointer;
 }

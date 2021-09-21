@@ -3,9 +3,9 @@ import ThreeD from "./components/ThreeD";
 import Nav from "./components/Nav";
 import Socials from "./components/Socials";
 import Projects from "./components/Projects";
-import About from "./components/About";
-import React, { useRef, createRef, useEffect, useState }  from "react";
-import { Canvas, useLoader, useFrame, useThree } from "@react-three/fiber";
+// import About from "./components/About";
+import React, { useState }  from "react";
+import { Element } from "react-scroll";
 
 function App() {
   const [coinDrop, setCoinDrop] = useState(false);
@@ -13,16 +13,19 @@ function App() {
   return (
     <div className="App">
       <header className="header" id="home">
-        <ThreeD coinDrop={coinDrop}/>
+        <ThreeD coinDrop={coinDrop} />
         <div className="header-text">
           <h1>MAGGIE <br/> SHAN</h1>
-          <p>I'm a developer, designer <br/> and student</p>
+          <h2 className="accent"><span className="accent">Hi</span>, nice to meet you!</h2> 
+          <p>I'm a software engineer and designer focused on building immersive digital experiences.</p>
         </div>
       </header>
-      <Nav setCoinDrop={setCoinDrop}/>
+      <Nav setCoinDrop={setCoinDrop} />
       <Socials />
-      <Projects />
-      <About />
+      <Element name="projects">
+        <Projects />
+      </Element>
+      {/* <About /> */}
     </div>
   );
 }

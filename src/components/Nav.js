@@ -1,38 +1,28 @@
 import '../styles/_Nav.scss'
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 function Nav(props) {
     return (
-        <div className="nav">
+        <div className="navi">
             <Link
-                className="nav-item"
+                className="navi-item"
                 activeClass="active"
                 to="projects"
                 spy={true}
                 smooth={true}
-                offset={-300}
+                offset={-80}
                 duration={500}
-                onSetActive={() => props.setCoinDrop(true)}
-                onSetInactive={() => props.setCoinDrop(false)}
             >Projects </Link>
-            <Link
-                className="nav-item"
+            {/* <Link
+                className="navi-item"
                 activeClass="active"
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={-80}
                 duration={500}
-            >About </Link>
-            <Link
-                className="nav-item"
-                activeClass="active"
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-            >Contact </Link>
+            >About </Link> */}
+            <a href="https://drive.google.com/file/d/1Xz4zFIJFhgtQrrcN2ukN8Lr7R3g94lPs/view?usp=sharing" className="navi-item" target="__blank">About</a>
         </div>
     );
 }

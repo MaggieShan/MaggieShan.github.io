@@ -4,10 +4,14 @@ $titleFont: 'Baloo 2', cursive;
 $bodyFont: 'Roboto', sans-serif;
 
 // Colours
-$primaryColor: #2F5774;
-$secondaryColor: #D5EDE7;
+$primaryColor: #0D214B;
+$secondaryColor: #A1CDF4;
+$accentColor: #F4D35E;
+$lightColor: #bccddb;
 
 :export {
     primaryColor: $primaryColor;
     secondaryColor: $secondaryColor;
+    accentColor: $accentColor;
+    lightColor: $lightColor;
 }
