@@ -1,5 +1,6 @@
 import "../styles/_Projects.scss";
 import React from "react";
+import { Element } from "react-scroll";
 
 function Project(props) {
     return (
@@ -19,7 +20,7 @@ function Project(props) {
 
 function Projects() {
     return (
-        <div id="projects">
+        <Element className="scroll-section" id="projects">
             <div className="projects-heading">
                 {/* <img alt="coin" src="coin.png" className="coin"></img> */}
                 <h2>Currently working on this site!</h2>
@@ -42,7 +43,7 @@ function Projects() {
                     dev="https://devpost.com/software/unravel-nu2k3x"
                 />
             </div>
-        </div>
+        </Element>
     );
 }
 

@@ -1,33 +1,51 @@
 import "./App.scss";
-import ThreeD from "./components/ThreeD";
 import Nav from "./components/Nav";
 import Socials from "./components/Socials";
+import Header from "./components/Header";
 import Projects from "./components/Projects";
-// import About from "./components/About";
-import React, { useState }  from "react";
-import { Element } from "react-scroll";
+import About from "./components/About";
+import React, { useState, useEffect } from "react";
 
 function App() {
-  const [coinDrop, setCoinDrop] = useState(false);
+    const [width, setWidth] = useState(0); 
+    const [height, setHeight] = useState(0); 
+    const [isDesktop, setDevice] = useState(true); 
 
-  return (
-    <div className="App">
-      <header className="header" id="home">
-        <ThreeD coinDrop={coinDrop} />
-        <div className="header-text">
-          <h1>MAGGIE <br/> SHAN</h1>
-          <h2 className="accent"><span className="accent">Hi</span>, nice to meet you!</h2> 
-          <p>I'm a software engineer and designer focused on building immersive digital experiences.</p>
+    const updateDimensions = () => {
+        const new_width = window.innerWidth; 
+        const new_height = window.innerHeight;
+        
+        setWidth(new_width);
+        setHeight(new_height);
+
+        if (width > 1024) {
+            setDevice(true); 
+        } else { setDevice(false); }
+    }
+
+    useEffect(() => {
+        updateDimensions(); 
+        window.addEventListener("resize", updateDimensions);
+        return () =>
+            window.removeEventListener("resize", updateDimensions);
+    });
+
+    const mobileStyle = {
+        height: height,
+        width: width,
+    }
+    
+    return (
+        <div className="App" style={mobileStyle}>
+            <div className="scroll-container">
+                <Header width={width} height={height} isDesktop={isDesktop} />
+                {/* <About /> */}
+                <Projects />
+            </div>
+            <Socials />
+            <Nav width={width} height={height} isDesktop={isDesktop} />
         </div>
-      </header>
-      <Nav setCoinDrop={setCoinDrop} />
-      <Socials />
-      <Element name="projects">
-        <Projects />
-      </Element>
-      {/* <About /> */}
-    </div>
-  );
+    );
 }
 
 export default App;

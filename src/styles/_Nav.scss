@@ -6,19 +6,124 @@
     flex-direction: column;
     text-align: right;
     bottom: 5vh;
+    right: 3.5vw;
+}
+
+.mobile-menu {
+    height: 100vh;
+    width: 100vw;
+    background: $secondaryColor;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: -3vw;
+    margin-bottom: -5vh;
+    border-radius: 50% 0 0 0;
+
+    .navi-item {
+        font-family: $titleFont;
+        font-size: 2rem;
+        text-decoration: none;
+        color: $primaryColor;
+        -webkit-text-stroke: 1px $primaryColor;
+    }
+    .active,
+    .navi-item:hover {
+        color: $secondaryColor;
+        cursor: pointer;
+    }
+}
+
+.hideMenu {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+
+    .navi-item {
+        font-family: $titleFont;
+        font-size: 2rem;
+        text-decoration: none;
+        color: transparent;
+        -webkit-text-stroke: 1px $secondaryColor;
+    }
+    
+    .active,
+    .navi-item:hover {
+        color: $secondaryColor;
+        cursor: pointer;
+    }
+}
+
+.ham {
+    background: $secondaryColor;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: fixed;
+    z-index: 5;
     right: 5vw;
+    bottom: 5vh; 
+
+    label {
+        display: flex;
+        flex-direction: column;
+        width: 25px;
+        cursor: pointer;
+        margin: auto;
+        margin-top: 25%;
+        
+        span {
+            background: $primaryColor; 
+            border-radius: 10px;
+            height: 4px;
+            margin: 2px 0;
+            transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6); 
+        }
+        span:nth-of-type(1) { 
+            width: 50%;
+        }
+        span:nth-of-type(2) {
+            width: 100%;
+        }
+        span:nth-of-type(3) {
+            width: 75%;
+        }
+        
+        input[type="checkbox"] {
+            display: none;
+        }
+        
+        input[type="checkbox"]:checked {
+            ~ span:nth-of-type(1) {
+                transform-origin: bottom;
+                transform: rotatez(45deg) translate(1px, 2px);
+            }
+            ~ span:nth-of-type(2) {
+                transform-origin: top;
+                transform:rotatez(-45deg) translate(-1px, -1px);
+            }
+            ~ span:nth-of-type(3) {
+                transform-origin: bottom;
+                width: 50%;
+                transform: translate(9px, -4px) rotatez(45deg);
+            }
+        }
+    }
 }
 
-.navi-item {
-    font-family: $titleFont;
-    font-size: 2rem;
-    text-decoration: none;
-    color: transparent;
-    -webkit-text-stroke: 1px $secondaryColor;
+@media (min-width: 1050px) {
+    .ham {
+        display: none;
+    }
 }
 
-.active,
-.navi-item:hover {
-    color: $secondaryColor;
-    cursor: pointer;
+@media (max-width: 1024px) {
 }
